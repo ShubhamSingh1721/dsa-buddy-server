@@ -36,4 +36,9 @@ app.post("/generate-hint", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("🧠 DSA Buddy Hint API is running.");
+});
+
+
 app.listen(3000, () => console.log("Server running on port 3000"));
