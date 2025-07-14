@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const fetch = require("node-fetch");
 const cors = require("cors");
 
 const app = express();
@@ -43,7 +42,6 @@ app.post("/generate-hint", async (req, res) => {
 
     const data = await response.json();
 
-    // Debug log in case of errors
     console.log("Cohere response:", JSON.stringify(data, null, 2));
 
     const hint = data.generations?.[0]?.text?.trim();
